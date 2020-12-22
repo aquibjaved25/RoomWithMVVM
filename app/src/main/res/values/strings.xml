@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RoomDBSelf</string>
+    <string name="add_device">Add Device</string>
+    <string name="all_devices">All Devices</string>
+    <string name="device_name">Device Name</string>
+    <string name="total_inventory">Total Inventory</string>
+    <string name="available_inventory">Available Inventory</string>
+
+</resources>

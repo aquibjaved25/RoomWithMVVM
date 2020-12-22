@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDECED"
+    tools:context=".activity.AddDeviceActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        android:background="@drawable/rounded_corner"
+        android:elevation="@dimen/padding_10"
+        app:layout_constraintBottom_toBottomOf="@+id/view_below"
+        app:layout_constraintTop_toTopOf="@id/tl_device_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/edittext_underline_color"
+        android:textCursorDrawable="@null"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="@dimen/padding_10"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tl_total_inventory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <EditText
+            android:id="@+id/et_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/drawable_rectangle"
+            android:gravity="left"
+            android:hint="Device Name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_total_inventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginEnd="20dp"
+        android:elevation="@dimen/padding_10"
+        app:layout_constraintBottom_toTopOf="@+id/tv_add_employee"
+        app:layout_constraintTop_toBottomOf="@+id/tl_device_name">
+
+        <EditText
+            android:id="@+id/et_total_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/drawable_rectangle"
+            android:gravity="left"
+            android:hint="Total Inventory"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_add_employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_selected"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:outlineProvider="bounds"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Add Device"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_total_inventory" />
+
+    <View
+        android:id="@+id/view_below"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_employee" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
